@@ -3,7 +3,7 @@ on: [push]
 jobs:
   type-check:
     name: 👨‍⚕️ Type Checking
-    runs-on: ubuntu-latest
+    runs-on: puzl-ubuntu-latest
     steps:
       - name: 🔔 Check out
         uses: actions/checkout@v3
@@ -23,4 +23,5 @@ jobs:
         run: echo "$(pdm venv --path in-project)/bin" >> $GITHUB_PATH
 
       - name: 🏃 mypy
-        run: mypy . --disable-error-code=import-untyped --disable-error-code=import-not-found
+        run: mypy . --disable-error-code=import-untyped 
+          --disable-error-code=import-not-found

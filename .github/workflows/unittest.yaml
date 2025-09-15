@@ -3,7 +3,7 @@ on: [push]
 jobs:
   unit-test:
     name: 🧪 Unit Testing
-    runs-on: ubuntu-latest
+    runs-on: puzl-ubuntu-latest
     steps:
       - name: 🔔 Check out
         uses: actions/checkout@v3
